@@ -1,0 +1,69 @@
+.footer {
+    width: 100%;
+    height: 250px;
+    padding: 20px 0;
+    background-color: rgb(238, 244, 248);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 0;
+    align-items: flex-start;
+}
+.footerItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+.footer img{
+    width: 50%;
+    margin-top: 5px;
+}
+.footer p{
+   color: rgb(58, 57, 57);
+   padding-top: 10px;
+}
+
+.footerItemTitle{
+    font-family: "Varela Round", sans-serif;
+    margin: 0px;
+    padding: 5px;
+    color: rgb(83, 77, 77);
+    width: 80%;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid rgb(167, 153, 153);
+    border-top: 1px solid rgb(167, 153, 153);
+}
+.footerList{
+    margin-bottom: 20px;
+    list-style: none;
+}
+.footerlistItem{
+    display: inline-block;
+    width: 50%;
+    margin-top: 15px;
+    color: rgb(77, 74, 74);
+    cursor: pointer;
+    font-weight: 900;
+}
+.footerlistItem:hover{
+    color: rgb(221, 9, 9);
+}
+.footerSocials{
+    margin-top: 15px;
+    display: flex;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+}
+.footerIcon{
+    margin: 15px;
+    font-size: 20px;
+}
+.footerIcon:hover {
+    color: rgb(221, 9, 9);
+}

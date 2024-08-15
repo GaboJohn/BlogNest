@@ -1,0 +1,61 @@
+.top{
+    font-family: "Josefin Sans", sans-serif;
+    position: sticky; /*stay on one position* evn when scrolling*/
+    height: 50px;
+    width: 100%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgb(232, 240, 238);
+}
+
+.topLeft,.topRight{
+    display: flex;
+    align-items: center;
+    flex: 3;
+    justify-content: center;
+}
+
+.topbarIcon{
+    font-size: 20px;
+    color: rgb(57, 59, 59);
+    margin-right: 14px;
+    cursor: pointer;
+}
+.topbarIcon:hover{
+    color: rgb(175, 18, 18);
+}
+.topRight img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.topCenter{
+    flex: 6;
+}
+
+.topLinks{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.toplinkList{
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.toplinkList:hover {
+    color: rgb(233, 93, 93);
+}
+.searchIcon{
+    margin-left: 18px;
+    font-size: 24px;
+    color: #6d5454;
+    cursor: pointer;
+
+}
