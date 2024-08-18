@@ -1,5 +1,6 @@
 .header{
     margin-top: 60px;
+    
 }
 .titles{
     font-family: "Lora", serif;
@@ -8,10 +9,20 @@
     align-items: center;
     color: #444;
 }
-.subTitle{
+.Title{
     position: absolute;
     top: 10%;
     font-size: 100px;
+    color: #837878;
+}
+.subtitle{
+    position: absolute;
+    top: 33%;
+    font-size: 25px;
+    font-style: italic;
+    word-spacing: 20px;
+    color: rgb(12, 100, 24);
+    font-weight: 500;
 }
 .header img{
     width: 100%;
