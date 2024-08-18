@@ -1,0 +1,76 @@
+.settings{
+    display: flex;
+}
+
+.settingsWrapper{
+    flex: 9;
+    padding: 20px;
+}
+.updateTitle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.updateAccount{
+    font-size: 25px;
+    color: rgb(58, 58, 167);
+    margin-bottom: 20px;
+}
+.deleteAccount {
+    font-size: 18px;
+    color: red;
+    cursor: pointer;
+}
+.settingsForm{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.profileSettings{
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.profileSettings img{
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.profileIcon{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(223, 127, 127);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 10px;
+    color: aliceblue;
+    cursor: pointer;
+}
+.settingsForm label{
+    font-size: 20px;
+    margin-top: 20px;
+}
+.settingsForm input{
+    height: 10px;
+    color: gray;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid rgb(230, 228, 228);
+}
+.updateBtn{
+    align-self: center;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(69, 69, 165);
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.updateBtn:hover{
+    background-color: rgb(147, 191, 194);
+}

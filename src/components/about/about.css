@@ -1,35 +1,38 @@
-.footer {
-    width: 100%;
-    height: 250px;
-    padding: 20px 0;
-    background-color: rgb(238, 244, 248);
+.sidelinks {
+    
+    flex: 1;
+    margin: 20px;
+    padding: 30px;
+    
+    margin-top: 10px;
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    position: relative;
-    bottom: 0;
-    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    width: 300px;
 }
-.footerItem{
+
+.sidelinks img {
+    width: 100%;
+    margin-top: 15px;
+}
+.sidelinks p {
+    color: rgb(58, 57, 57);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: "Josefin Sans",
+        sans-serif;
+}
+
+.sideItem {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
-    margin: 20px;
-    text-align: center;
-}
-.footer img{
-    width: 50%;
-    margin-top: 5px;
-}
-.footer p{
-   color: rgb(58, 57, 57);
-   padding-top: 10px;
 }
 
-.footerItemTitle{
+.sideitemTitle {
     font-family: "Varela Round", sans-serif;
-    margin: 0px;
+    margin: 10px;
     padding: 5px;
     color: rgb(83, 77, 77);
     width: 80%;
@@ -38,32 +41,36 @@
     border-bottom: 1px solid rgb(167, 153, 153);
     border-top: 1px solid rgb(167, 153, 153);
 }
-.footerList{
+
+.sideList {
     margin-bottom: 20px;
     list-style: none;
 }
-.footerlistItem{
+
+.sidelistItem {
     display: inline-block;
     width: 50%;
     margin-top: 15px;
     color: rgb(77, 74, 74);
     cursor: pointer;
-    font-weight: 900;
 }
-.footerlistItem:hover{
+
+.sidelistItem:hover {
     color: rgb(221, 9, 9);
 }
-.footerSocials{
+
+.sideSocials {
     margin-top: 15px;
     display: flex;
     width: 250px;
     align-items: center;
     justify-content: center;
 }
-.footerIcon{
+
+.sidelistIcon {
     margin: 15px;
     font-size: 20px;
 }
-.footerIcon:hover {
-    color: rgb(221, 9, 9);
+.sidelistIcon:hover{
+    color: rgb(185, 17, 17);
 }
