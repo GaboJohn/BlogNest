@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/collectionName", {
+mongoose.connect("mongodb://localhost:27017/mudauzwothe", {
     useNewUrlParser: true,
     useUnifiedTopology: true
  });const contactSchema = {
@@ -19,3 +19,4 @@ mongoose.connect("mongodb://localhost:27017/collectionName", {
         }
     });
  });
+ mongodb+srv://mudauzwothe:pXTswHJWBKwFdz7B@cluster0.valh5wl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
