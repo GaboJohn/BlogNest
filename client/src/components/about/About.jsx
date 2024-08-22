@@ -1,7 +1,19 @@
-import aboutPic from '../assets/about.jpg';
+import axios from "axios";
+import { useEffect, useState } from 'react';
+import {Link} from "react-router-dom";
+//import aboutPic from '../assets/about.jpg';
 import './about.css';
 
 export default function About() {  
+  const [cats, setCats] = useState([]);
+
+  useEffect(()=>{
+  const getCats= async ()=> {
+    const res = await axios.get("/categories")
+    setCats(res.data)
+  };
+  getCats();
+  },[])
     return (
     <div className='sidelinks'>
       <div className="sideItem">
@@ -23,12 +35,11 @@ export default function About() {
           CATEGORIES
         </span>
         <ul className='sideList'>
-          <li className='sidelistItem'>Sports</li>
-          <li className='sidelistItem'>Food</li>
-          <li className='sidelistItem'>Tech</li>
-          <li className='sidelistItem'>Lifestyle</li>
-          <li className='sidelistItem'>Music</li>
-          <li className='sidelistItem'>Nature</li>
+          {cats.map((c) => (
+          <Link to={'/?cat=${c.name}'} className="link">
+          <li className='sidelistItem'>{c.name}</li>
+          </Link>
+        ))}
         </ul>
       </div>
       <div className="sideItem">
