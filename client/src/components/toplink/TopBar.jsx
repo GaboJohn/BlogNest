@@ -35,7 +35,7 @@ export default function TopBar() {
           </ul>
           )
         }
-           <span className='searchIcon'><i class="fa-solid fa-magnifying-glass"></i></span>
+           <span className='searchIcon'><i className="fa-solid fa-magnifying-glass"></i></span>
         </div>
     </div>
   )
