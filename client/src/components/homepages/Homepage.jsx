@@ -6,13 +6,12 @@ import { useEffect, useState } from "react";
 import axios from "axios"
 
 export default function Homepage() {
-  const [post,setPosts] = useState([]);
+  const [posts,setPosts] = useState([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/post")
-      setPosts(res.data);
-      console.log(res)
+      const res = await axios.get("/posts")
+      setPosts(res.data)
     }
     fetchPosts();
   },[])
@@ -22,7 +21,7 @@ export default function Homepage() {
         <Header />
       <div className="home">
         <div className="post">
-         <Post  post={post}/>
+         <Post  posts={posts}/>
          </div>
          <div className="Sidelink">
          <About />

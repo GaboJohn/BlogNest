@@ -3,7 +3,7 @@ import './posts.css';
 
 export default function Posts() {
   return (
-    <div className='post'>
+     <div className='post'>
         <Post />
         <Post />
         <Post />
