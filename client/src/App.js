@@ -6,29 +6,28 @@ import TopBar from './components/toplink/TopBar';
 import Register from './components/login/Register';
 import Write from './components/write/Write';
 import About from './components/about/About';
-import { BrowserRouter as Router, Route,
-   Routes
-} from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Routes} from "react-router-dom";
 import Singlepost from './components/singlePost/Singlepost';
+import { useContext } from 'react';
+import {Context} from ".context/Context";
 
 function App() {
-  const user = false;
+  const user = useContext(Context);
   return (
     <Router>
-    <TopBar />
-    <Routes>
-      <Route exact path="/" element={<Homepage />} />
-      <Route  path='/about' element={<About />}/>
-      <Route path="/register" element={ user ? <Homepage/>:
-        <Register />} />
-      <Route path="/login" element={user ? <Homepage/>
-       : <Login />} />
-      <Route path="/write" element={user ? <Write /> :
-        <Register/>} />
-      <Route path="/settings" element={user ? <Settings />
-       : <Register/>} />
-      <Route path="/singlePost" element={<Singlepost />} />
-    </Routes>
+      <TopBar />
+    <Switch>
+    <Route exact path="/">
+      <Homepage />
+      </Route>
+      <Route path="/register">{user ? <Homepage /> : <Register />}</Route>
+        <Route path="/login">{user ? <Home /> : <Login />}</Route>
+        <Route path="/write">{user ? <Write /> : <Register />}</Route>
+        <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
+        <Route path="/post/:postId">
+        <single />
+    </Route>
+    </Switch>
     </Router>
   );
 }
