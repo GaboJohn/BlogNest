@@ -1,63 +1,60 @@
-.top{
-    font-family: "Josefin Sans", sans-serif;
-    position: sticky; /*stay on one position* evn when scrolling*/
-    height: 50px;
+.top {
     width: 100%;
+    height: 50px;
+    background-color: white;
+    position: sticky;
     top: 0;
     display: flex;
     align-items: center;
-    background-color: rgb(232, 240, 238);
+    font-family: "Josefin Sans", sans-serif;
     z-index: 999;
-}
-
-.topLeft,.topRight{
+  }
+  
+  .topLeft,
+  .topRight {
+    flex: 3;
     display: flex;
     align-items: center;
-    flex: 3;
     justify-content: center;
-}
-
-.topbarIcon{
+  }
+  
+  .topCenter {
+    flex: 6;
+  }
+  
+  .topIcon {
     font-size: 20px;
-    color: rgb(57, 59, 59);
-    margin-right: 14px;
+    margin-right: 10px;
+    color: #444;
     cursor: pointer;
-}
-.topbarIcon:hover{
-    color: rgb(175, 18, 18);
-}
-.topRight img {
-    border-radius: 50%;
+  }
+  
+  .topImg {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
     object-fit: cover;
-}
-.topCenter{
-    flex: 6;
-}
-
-.topLinks{
+    cursor: pointer;
+  }
+  
+  .topList {
     display: flex;
     justify-content: center;
     margin: 0;
     padding: 0;
     list-style: none;
-}
-
-.toplinkList{
-    font-size: 14px;
-    font-weight: 600;
+  }
+  
+  .topListItem {
     margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
     cursor: pointer;
-    color: #7e7979;
-}
-.toplinkList:hover {
-    color: rgb(79, 31, 167);
-}
-.searchIcon{
-    margin-left: 18px;
-    font-size: 24px;
-    color: #6d5454;
+  }
+  
+  .topSearchIcon {
+    font-size: 18px;
+    color: #666;
     cursor: pointer;
-
-}
+    margin-left: 15px;
+  }
