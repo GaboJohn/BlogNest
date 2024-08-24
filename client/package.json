@@ -12,7 +12,8 @@
     "react-router-dom": "^6.26.1",
     "react-scripts": "^5.0.1",
     "router-dom": "^2.2.11",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "webpack-dev-server": "^5.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -37,5 +38,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },"proxy": "http://localhost:5000/api/"
+  },
+  "proxy": "http://localhost:5000/api/"
 }

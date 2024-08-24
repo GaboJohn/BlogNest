@@ -1,5 +1,5 @@
 import Header from "../../components/header/Header";
-import Post from '../../components/post/Posts';
+import Post from '../../components/post/Post';
 import About from "../../components/about/About";
 import './homepage.css';
 import { useEffect, useState } from "react";

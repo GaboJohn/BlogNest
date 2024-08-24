@@ -49,7 +49,7 @@ export default function Settings() {
             <span className="deleteAccount">Delete account</span>
           </div>
         
-        <form className="settingsForm">
+        <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="profileSettings">
           <img

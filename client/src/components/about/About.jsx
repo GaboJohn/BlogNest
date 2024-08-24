@@ -18,7 +18,7 @@ export default function About() {
     <div className='sidelinks'>
       <div className="sideItem">
         <span className="sideitemTitle">ABOUT US</span>
-        <img src={aboutPic} alt="" />
+        <img src="https://pixabay.com/illustrations/ai-generated-brother-sister-tree-8729886/" alt="" />
          <p>Welcome to BlogNest, a space where ideas come to life and 
          stories are shared. Our platform is designed for those who have 
           a passion for writing, a desire to share knowledge, and an interest
@@ -36,7 +36,7 @@ export default function About() {
         </span>
         <ul className='sideList'>
           {cats.map((c) => (
-          <Link to={'/?cat=${c.name}'} className="link">
+          <Link to={`/?cat=${c.name}`} className="link">
           <li className='sidelistItem'>{c.name}</li>
           </Link>
         ))}
