@@ -1,5 +1,5 @@
 import './topbar.css';
-import profilePic from '../assets/profile-pic.jpg';
+//import profilePic from '../assets/profile-pic.jpg';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import {Context} from "../../context/Context";
@@ -10,6 +10,7 @@ export default function TopBar() {
   const handleLogout = () => {
     dispatch({ type: "LOGOUT"});
   }
+  
   return (
     <div className='top'>
         <div className='topLeft'>
@@ -31,7 +32,7 @@ export default function TopBar() {
         <div className='topRight'>
           {
           user ? (
-           <img src={profilePic} alt="" />
+           <img src={user.profilePic} alt="" />
           ) : (
             <ul className='topLinks'>
           <li className='toplinkList'>

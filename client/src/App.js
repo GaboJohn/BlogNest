@@ -10,11 +10,12 @@ import { BrowserRouter as Router, Route,
    Routes
 } from "react-router-dom";
 import { useContext } from 'react';
-import {Context} from "./context/Context";
+import { Context } from "./context/Context";
 //import Singlepost from './components/singlePost/Singlepost';
 
 function App() {
-  const user = useContext(Context);
+  const { user } = useContext(Context);
+  
   return (
     <Router>
     <TopBar />
