@@ -1,14 +1,13 @@
-import React from 'react';
-import Post from "./Posts";
+import Post from "../post/Post";
 import './posts.css';
 
-export default function Posts({posts}) {
+export default function Posts({ posts }) {
   return (
-    <div className='post'>
-        {posts.map(p=>(
-          
-          <Post post={p} />
-        ))}
+    <div className='posts'>
+      {posts.map((p, index) => (
+        <Post key={p.id || index} post={p}/>
+      ))}
+        
     </div>
   );
 }

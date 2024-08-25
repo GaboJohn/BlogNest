@@ -1,32 +1,33 @@
 import Homepage from './components/homepages/Homepage';
-/*import Mypost from './components/homepages/myposts/Mypost';*/
-//import Login from './components/login/Login';
+//import Mypost from './components/homepages/myposts/Mypost';
+import Login from './components/login/Login';
 import Settings from './components/settings/Settings';
 import TopBar from './components/toplink/TopBar';
 import Register from './components/login/Register';
 import Write from './components/write/Write';
-//import About from './components/about/About';
-import { BrowserRouter as Router, Routes, Route,} from "react-router-dom";
-//import Singlepost from './components/singlePost/Singlepost';
-import { useContext } from 'react';
-import {Context} from "./context/Context";
+import About from './components/about/About';
+import { BrowserRouter as Router, Route,
+   Routes
+} from "react-router-dom";
+import Singlepost from './components/singlePost/Singlepost';
 
 function App() {
-  const user = useContext(Context);
+  const user = false;
   return (
     <Router>
-      <TopBar />
+    <TopBar />
     <Routes>
-    <Route exact path="/">
-      <Homepage />
-      </Route>
-      <Route path="/register">{user ? <Homepage /> : <Register />}</Route>
-        <Route path="/login">{user ? <Homepage /> : <login />}</Route>
-        <Route path="/write">{user ? <Write /> : <Register />}</Route>
-        <Route path="/settings">{user ? <Settings /> : <Register />}</Route>
-        <Route path="/post/:postId">
-        <single />
-    </Route>
+      <Route exact path="/" element={<Homepage />} />
+      <Route  path='/about' element={<About />}/>
+      <Route path="/register" element={ user ? <Homepage/>:
+        <Register />} />
+      <Route path="/login" element={user ? <Homepage/>
+       : <Login />} />
+      <Route path="/write" element={user ? <Write /> :
+        <Register/>} />
+      <Route path="/settings" element={user ? <Settings />
+       : <Register/>} />
+      <Route path="/post/:postId" element={<Singlepost />} />
     </Routes>
     </Router>
   );

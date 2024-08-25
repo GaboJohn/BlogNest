@@ -18,10 +18,10 @@ mongoose.connect(process.env.MONGO_URL)
 
 const storage = multer.diskStorage({
     destination: (req,file,cb) => {
-        cb(null, "images");
+        cb(null, req.body.name);
     },
     filename: (req,file,cb) => {
-        cb(null, req.body.name);
+        cb(null, "hello.jpg");
     },
    });
 

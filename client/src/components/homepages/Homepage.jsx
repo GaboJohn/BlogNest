@@ -1,29 +1,26 @@
 import Header from "../../components/header/Header";
-import Post from '../../components/post/Post';
+import Posts from '../../components/posts/Posts';
 import About from "../../components/about/About";
 import './homepage.css';
-import { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation } from "react-router";
+import { useEffect, useState } from "react";
 
 export default function Homepage() {
-  const [posts,setPosts] = useState([]);
-  const { search } = useLocation();
+ const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
+ useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get("/posts" +search);
+      const res = await axios.get("/posts");
       setPosts(res.data);
     }
     fetchPosts();
-  },[search])
-  
+  },[])
   return (
         <>
         <Header />
       <div className="home">
         <div className="post">
-         <Post  posts={posts}/>
+         <Posts posts={posts}/>
          </div>
          <div className="Sidelink">
          <About />

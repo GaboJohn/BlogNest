@@ -1,24 +1,12 @@
-import axios from "axios";
-import { useEffect, useState } from 'react';
-import {Link} from "react-router-dom";
-//import aboutPic from '../assets/about.jpg';
+import aboutPic from '../assets/about.jpg';
 import './about.css';
 
 export default function About() {  
-  const [cats, setCats] = useState([]);
-
-  useEffect(()=>{
-  const getCats= async ()=> {
-    const res = await axios.get("/categories")
-    setCats(res.data)
-  };
-  getCats();
-  },[])
     return (
     <div className='sidelinks'>
       <div className="sideItem">
         <span className="sideitemTitle">ABOUT US</span>
-        <img src="https://pixabay.com/illustrations/ai-generated-brother-sister-tree-8729886/" alt="" />
+        <img src={aboutPic} alt="" />
          <p>Welcome to BlogNest, a space where ideas come to life and 
          stories are shared. Our platform is designed for those who have 
           a passion for writing, a desire to share knowledge, and an interest
@@ -35,11 +23,12 @@ export default function About() {
           CATEGORIES
         </span>
         <ul className='sideList'>
-          {cats.map((c) => (
-          <Link to={`/?cat=${c.name}`} className="link">
-          <li className='sidelistItem'>{c.name}</li>
-          </Link>
-        ))}
+          <li className='sidelistItem'>Sports</li>
+          <li className='sidelistItem'>Food</li>
+          <li className='sidelistItem'>Tech</li>
+          <li className='sidelistItem'>Lifestyle</li>
+          <li className='sidelistItem'>Music</li>
+          <li className='sidelistItem'>Nature</li>
         </ul>
       </div>
       <div className="sideItem">
