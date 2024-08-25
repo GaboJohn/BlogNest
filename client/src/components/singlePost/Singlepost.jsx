@@ -1,16 +1,31 @@
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import './singlepost.css';
-import postPic from "../assets/post.jpg"
+//import postPic from "../assets/post.jpg"
+import { useEffect, useState } from "react";
+import axios from "axios";
+import {Link} from "react-router-dom";
 
 export default function Singlepost() {
  const location = useLocation();
-  console.log(location)
+  const path = (location.pathname.split("/")[2]);
+  const [post, setPost] =useState({});
+  
+  useEffect(() => {
+    const getPost = async () => {
+      const res = await axios.get("/posts/" + path);
+      setPost(res.data)
+    };
+    getPost(); 
+  }, [path])
+
   return (
     <div className='single'>
         <div className="postWrapper">
-          <img src={postPic} alt="" />
+          {post.photo && (
+          <img src={post.photo} alt="" />
+          )}
           <h1 className='postTitle'>
-            Lorem ipsum dolor sit amet.
+            {post.title}
             <div className="postEdit">
               <i className="editIcon fa-regular fa-pen-to-square"></i>
               <i className="editIcon fa-solid fa-trash"></i>
@@ -18,24 +33,18 @@ export default function Singlepost() {
           </h1>
           <div className="postInfo">
             <span className="postAuthor">
-              Author: <b>Gabo</b>
+              Author:
+              <Link to={`/?user=${post.username}`} className="link">
+               <b>{post.username}</b>
+              </Link>
             </span>
+
             <span className="postDate">
-              1 hour ago
+              {new Date(post.createdAt).toDateString()} 
             </span>
           </div>
           <p className='postDescr'>
-            Lorem ipsum dolor sit, amet consectetur adipisicing 
-            elit. Doloremque sequi quod velit iure est at, 
-            tempore id, sit ad corrupti inventore adipisci quo qui facilis, 
-            iste nesciunt fuga quisquam animi.
-             Lorem ipsum dolor sit, amet consectetur adipisicing 
-            elit. Doloremque sequi quod velit iure est at, 
-            tempore id, sit ad corrupti inventore adipisci quo qui facilis, 
-            iste nesciunt fuga quisquam animi. Lorem ipsum dolor sit, amet consectetur adipisicing 
-            elit. Doloremque sequi quod velit iure est at, 
-            tempore id, sit ad corrupti inventore adipisci quo qui facilis, 
-            iste nesciunt fuga quisquam animi.
+            {post.desc}
           </p>
         </div>
     </div>
