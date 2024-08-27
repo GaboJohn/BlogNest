@@ -25,7 +25,7 @@ export default function Homepage() {
         <div className="post">
          <Posts posts={posts}/>
          </div>
-         <div className="Sidelink">
+         <div className="about-section-container">
          <About />
          </div>
       </div>

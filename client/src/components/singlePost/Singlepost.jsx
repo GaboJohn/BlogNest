@@ -49,7 +49,7 @@ export default function SinglePost() {
     <div className="single">
       <div className="postWrapper">
         {post.photo && (
-          <img src={PF + post.photo} alt="" className="postWrapper img" />
+          <img src={PF + post.photo} alt="" />
         )}
         {updateMode ? (
           <input
@@ -65,11 +65,11 @@ export default function SinglePost() {
             {post.username === user?.username && (
               <div className="postEdit">
                 <i
-                  className="singlePostIcon far fa-edit"
+                  className="editIcon far fa-edit"
                   onClick={() => setUpdateMode(true)}
                 ></i>
                 <i
-                  className="singlePostIcon far fa-trash-alt"
+                  className="editIcon far fa-trash-alt"
                   onClick={handleDelete}
                 ></i>
               </div>
@@ -77,13 +77,13 @@ export default function SinglePost() {
           </h1>
         )}
         <div className="postInfo">
-          <span className="singlePostAuthor">
+          <span className="postAuthor">
             Author:
             <Link to={`/?user=${post.username}`} className="link">
               <b> {post.username}</b>
             </Link>
           </span>
-          <span className="singlePostDate">
+          <span className="postDate">
             {new Date(post.createdAt).toDateString()}
           </span>
         </div>
@@ -94,7 +94,7 @@ export default function SinglePost() {
             onChange={(e) => setDesc(e.target.value)}
           />
         ) : (
-          <p className="postDesc">{desc}</p>
+          <p className="postDescr">{desc}</p>
         )}
         {updateMode && (
           <button className="singlePostButton" onClick={handleUpdate}>

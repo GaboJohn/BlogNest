@@ -8,9 +8,14 @@ export default function Write() {
   const [desc, setDesc] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
-
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!user || !user.username) {
+      console.error("User is not logged in or username is missing");
+      return;
+    }
+
     const newPost = {
       username: user.username,
       title,

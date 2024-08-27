@@ -58,14 +58,23 @@
 
 .postInfo {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 20px;
   display: flex;
   justify-content: space-between;
   color: rgb(10, 150, 168);
   font-family: "Varela Round", sans-serif;
-  color:#b39656
+  
 }
-
+.postAuthor{
+  position: relative;
+  right: 40%;
+}
+/*.postDate{
+  position: relative;
+  left: 35%;
+  bottom: 30px;
+  font-size: 18px;
+}*/
 .postDescr {
   color: rgb(71, 69, 69);
   font-size: 18px;

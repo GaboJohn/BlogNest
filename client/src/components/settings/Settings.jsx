@@ -44,19 +44,19 @@ export default function Settings() {
   return (
     <div className="settings">
       <div className="settingsWrapper">
-        <div className="settingsTitle">
-          <span className="settingsUpdateTitle">Update Your Account</span>
-          <span className="settingsDeleteTitle">Delete Account</span>
+        <div className="updateTitle">
+          <span className="updateAccount">Update Your Account</span>
+          <span className="deleteAccount">Delete Account</span>
         </div>
         <form className="settingsForm" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
-          <div className="settingsPP">
+          <div className="profileSettings">
             <img
               src={file ? URL.createObjectURL(file) : PF+user.profilePic}
               alt=""
             />
             <label htmlFor="fileInput">
-              <i className="settingsPPIcon far fa-user-circle"></i>
+              <i className="profileIcon far fa-user-circle"></i>
             </label>
             <input
               type="file"
@@ -82,7 +82,7 @@ export default function Settings() {
             type="password"
             onChange={(e) => setPassword(e.target.value)}
           />
-          <button className="settingsSubmit" type="submit">
+          <button className="updateBtn" type="submit">
             Update
           </button>
           {success && (

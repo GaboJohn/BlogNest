@@ -15,6 +15,7 @@ export default function About() {
   getCats();
   },[])
     return (
+  
     <div className='sidelinks'>
       <div className="sideItem">
         <span className="sideitemTitle">ABOUT US</span>

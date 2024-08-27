@@ -68,3 +68,81 @@
   cursor: pointer;
 
 }
+/* Responsive styles for smaller screens (e.g., tablets and smartphones) */
+@media screen and (max-width: 768px) {
+  /*.top {
+    flex-direction: column;
+    height: auto;
+  }*/
+
+  /*.topLeft,
+  .topCenter,
+  .topRight {
+    flex: 1;
+    justify-content: center;
+    margin-bottom: 10px;
+  }*/
+
+  .topLinks {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0 10px;
+  }
+
+  .toplinkList {
+    margin-right: 10px;
+    font-size: 12px;;
+  }
+}
+
+/* Further adjustments for very small screens (e.g., smartphones in portrait mode) */
+@media screen and (max-width: 480px) {
+ /* .top {
+    padding: 10px;
+  }
+
+  .topbarIcon,
+  .searchIcon {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+
+  .topRight img {
+    width: 35px;
+    height: 35px;
+  }*/
+
+ .topLinks {
+   flex-direction: column;
+   align-items: center;
+   padding: 5px;
+
+ }
+
+ .toplinkList {
+   margin-top: 10px;
+   font-size: 12px;
+  
+ }
+}
+
+/* Responsive styles for larger screens (e.g., desktops) */
+@media screen and (min-width: 1024px) {
+  .top {
+    padding: 0 20px;
+  }
+
+  .topLeft,
+  .topCenter,
+  .topRight {
+    flex: 1;
+  }
+
+  .sidelinks {
+    width: 25%;
+  }
+
+  .sideitemTitle {
+    font-size: 18px;
+  }
+}

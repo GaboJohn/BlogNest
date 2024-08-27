@@ -1,5 +1,21 @@
 .home{
     display: flex;
     justify-content: space-between;
-    
+    margin: 20px;
+}
+.about-section-container {
+    width: 100%;
+    max-width: 1200px;
+    /* Control the maximum width */
+    margin: 0 auto;
+    /* Center the content */
+    padding: 20px;
+}
+
+/* Hide About section on small screens when part of homepage */
+@media (max-width: 768px) {
+    .about-section-container {
+        display: none;
+        /* Hide on small screens */
+    }
 }
