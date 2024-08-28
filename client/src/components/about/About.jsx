@@ -19,7 +19,7 @@ export default function About() {
     <div className='sidelinks'>
       <div className="sideItem">
         <span className="sideitemTitle">ABOUT US</span>
-        <img src={aboutPic} alt="" />
+         <img src={aboutPic} alt="" />
          <p>Welcome to BlogNest, a space where ideas come to life and 
          stories are shared. Our platform is designed for those who have 
           a passion for writing, a desire to share knowledge, and an interest

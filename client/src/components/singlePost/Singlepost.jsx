@@ -14,6 +14,8 @@ export default function SinglePost() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [updateMode, setUpdateMode] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
+
 
   useEffect(() => {
     const getPost = async () => {
@@ -30,9 +32,14 @@ export default function SinglePost() {
       await axios.delete(`/posts/${post._id}`, {
         data: { username: user.username },
       });
+      setSuccessMessage("Your post has been successfully deleted!");
+      setTimeout(() => {
       window.location.replace("/");
-    } catch (err) {}
-  };
+    }, 2000);
+  } catch (err) {
+    console.error("Error deleting post:", err);
+  }
+};
 
   const handleUpdate = async () => {
     try {
@@ -48,6 +55,7 @@ export default function SinglePost() {
   return (
     <div className="single">
       <div className="postWrapper">
+         {successMessage && <p className="successMessage">{successMessage}</p>}
         {post.photo && (
           <img src={PF + post.photo} alt="" />
         )}

@@ -7,14 +7,14 @@
 .sidelinks {
     flex: 3;
     margin: 20px;
-    padding: 30px;
+    padding: 20px;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     align-items: center;
     width: 300px;
-    background-color: rgb(245, 248, 247);
+    background-color: rgb(251, 253, 252);
     
 }
 
@@ -85,14 +85,11 @@
 }
 
 /* Center and show sidelinks on small screens */
-@media screen and (max-width: 768px) {
+/*@media screen and (max-width: 768px) {
     .sidelinks {
-        display: flex;
-        /* Show sidelinks on small screens */
+        display: flex; 
         margin: 0 auto;
-        /* Center the sidelinks horizontally */
         width: 100%;
-        /* Make the sidelinks take full width */
     }
 
     .sidelinks img {
@@ -104,4 +101,4 @@
         align-items: center;
         text-align: center;
     }
-}
+}*/

@@ -69,12 +69,12 @@
   position: relative;
   right: 40%;
 }
-/*.postDate{
+.postDate{
   position: relative;
-  left: 35%;
-  bottom: 30px;
-  font-size: 18px;
-}*/
+  left: 30%;
+  bottom: 39px;
+  font-size: 13px;
+}
 .postDescr {
   color: rgb(71, 69, 69);
   font-size: 18px;
@@ -107,4 +107,10 @@
   cursor: pointer;
   align-self: flex-end;
   margin-top: 20px;
+}
+.successMessage {
+  color: green;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
 }

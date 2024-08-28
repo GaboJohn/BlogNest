@@ -1,6 +1,7 @@
 .write{
     padding-top: 50px;
    
+   
 }
 .writeImg{
     width: 50vw;
@@ -55,4 +56,10 @@
 }
 .writeSubmit:hover{
     background-color: grey;
+}
+.successMessage {
+    color: green;
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
 }

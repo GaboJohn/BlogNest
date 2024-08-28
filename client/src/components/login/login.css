@@ -23,7 +23,7 @@
     padding: 10px;
     border: none;
 }
-.loginBtn{
+.loginBtn1{
    background-color: rgb(42, 42, 207);
    margin-top: 20px;
    border: none;
@@ -33,11 +33,11 @@
    padding: 10px;
    font-size: 16px;
 }
-.loginBtn:disabled{
+.loginBtn1:disabled{
     cursor: not-allowed;
     background-color: purple;
 }
-.loginBtn:hover{
+.loginBtn1:hover{
     background-color: rgb(136, 133, 133);
     color: rgb(31, 30, 30);
 }
@@ -47,17 +47,18 @@ p {
     font-weight: 600;
     margin-top: 15px;
 }
-.registerBtn{
+.registerBtn2{
     background-color: blueviolet;
     color: aliceblue;
-    padding: 10px;
+    padding: 5px;
     border: none;
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
     margin-top: 5px;
+    width: 80px;
 }
-.registerBtn:hover{
+.registerBtn2:hover{
     background-color: rgb(136, 133, 133);
     color: rgb(31, 30, 30);
 }

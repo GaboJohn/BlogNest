@@ -38,7 +38,7 @@ export default function TopBar() {
           </li>
           <li className="toplinkList">
             <Link className="link" to="/write">
-              WRITE
+              CREATE
             </Link>
           </li>
           <li className="toplinkList" onClick={handleLogout}>

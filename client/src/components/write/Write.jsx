@@ -6,6 +6,7 @@ import { Context } from "../../context/Context";
 export default function Write() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const [file, setFile] = useState(null);
   const { user } = useContext(Context);
  
@@ -29,18 +30,26 @@ export default function Write() {
       newPost.photo = filename;
       try {
         await axios.post("/upload", data);
-      } catch (err) {}
+      } catch (err) {
+        console.error("File upload error:", err);
+      }
     }
     try {
       const res = await axios.post("/posts", newPost);
+      setSuccessMessage("Your post has been successfully created!");
+      setTimeout(() => {
       window.location.replace("/post/" + res.data._id);
-    } catch (err) {}
+      }, 2000);
+    } catch (err) {
+      console.error("Post creation error:", err);
+    }
   };
   return (
     <div className="write">
       {file && (
         <img className="writeImg" src={URL.createObjectURL(file)} alt="" />
       )}
+      {successMessage && <p className="successMessage">{successMessage}</p>}
       <form className="writeForm" onSubmit={handleSubmit}>
         <div className="writeFormGroup">
           <label htmlFor="fileInput">
