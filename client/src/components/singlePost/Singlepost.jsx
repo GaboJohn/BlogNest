@@ -48,14 +48,17 @@ export default function SinglePost() {
         title,
         desc,
       });
-      setUpdateMode(false)
-    } catch (err) {}
-  };
+      setUpdateMode(false);
+    setSuccessMessage("Your post has been successfully updated!"); // Set success message
+  } catch (err) {
+    console.error("Error updating post:", err);
+  }
+};
 
   return (
     <div className="single">
       <div className="postWrapper">
-         {successMessage && <p className="successMessage">{successMessage}</p>}
+        
         {post.photo && (
           <img src={PF + post.photo} alt="" />
         )}
@@ -109,6 +112,7 @@ export default function SinglePost() {
             Update
           </button>
         )}
+          {successMessage && <p className="successMessage">{successMessage}</p>}
       </div>
     </div>
   );

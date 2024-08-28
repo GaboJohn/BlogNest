@@ -5,23 +5,24 @@ import Settings from './components/settings/Settings';
 import TopBar from './components/toplink/TopBar';
 import Register from './components/login/Register';
 import Write from './components/write/Write';
-import About from './components/about/About';
+//import About from './components/about/About';
+import Contact from './components/contacts/Contact';
 import { BrowserRouter as Router, Route,
    Routes
 } from "react-router-dom";
 import { useContext } from 'react';
 import { Context } from "./context/Context";
-//import Singlepost from './components/singlePost/Singlepost';
+
 
 function App() {
   const { user } = useContext(Context);
   
   return (
-    <Router>
+    <Router> 
     <TopBar />
     <Routes>
       <Route exact path="/" element={<Homepage />} />
-      <Route  path='/about' element={<About />}/>
+       <Route path="/contact" element={<Contact />} /> 
       <Route path="/register" element={ user ? <Homepage/>:
         <Register />} />
       <Route path="/login" element={user ? <Homepage/>

@@ -45,6 +45,7 @@ export default function Write() {
     }
   };
   return (
+    
     <div className="write">
       {file && (
         <img className="writeImg" src={URL.createObjectURL(file)} alt="" />

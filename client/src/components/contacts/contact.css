@@ -1,0 +1,75 @@
+.contactPage {
+    background: url("https://cdn.pixabay.com/photo/2019/11/23/11/33/mobile-phone-4646854_1280.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contactContainer {
+    width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactTitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contactInput,
+.contactTextarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Arial', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.contactInput:focus,
+.contactTextarea:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.contactTextarea {
+    height: 120px;
+    resize: none;
+}
+
+.contactButton {
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactButton:hover {
+    background-color: #666966;
+}
+
+.successMessage {
+    margin-top: 15px;
+    color: #28a745;
+    text-align: center;
+    font-weight: bold;
+}
